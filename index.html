@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي الأسئلة التفاعلي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شاشة الافتتاحية لإدخال الأسماء -->
+    <div id="start-screen">
+        <h1>تحدي الأسئلة التفاعلي</h1>
+        <p>يرجى إدخال أسماء الطلاب الثلاثة لبدء التحدي:</p>
+        <input type="text" id="student1" placeholder="اسم الطالب 1">
+        <input type="text" id="student2" placeholder="اسم الطالب 2">
+        <input type="text" id="student3" placeholder="اسم الطالب 3">
+        <button onclick="startChallenge()">ابدأ التحدي</button>
+    </div>
+
+    <!-- شاشة الأسئلة التفاعلية -->
+    <div id="question-screen" style="display:none;">
+        <h1>تحدي الأسئلة التفاعلي</h1>
+
+        <!-- منطقة السؤال -->
+        <div id="question-container">
+            <p id="question" class="question-text">ما هو السؤال؟</p>
+            <img src="i.png" alt="صورة توضيحية" id="question-image" style="width: 100px; margin-top: 10px;">
+        </div>
+
+        <!-- إظهار دور الطالب الحالي -->
+        <div id="current-student" style="margin: 20px; font-size: 1.5em; font-weight: bold;">
+            دور: <span id="student-turn">الطالب 1</span>
+        </div>
+
+        <!-- اختيارات الإجابة -->
+        <div class="answers-container">
+            <button class="answer-btn" data-answer="0">خيار 1</button>
+            <button class="answer-btn" data-answer="1">خيار 2</button>
+            <button class="answer-btn" data-answer="2">خيار 3</button>
+            <button class="answer-btn" data-answer="3">خيار 4</button>
+        </div>
+
+        <p id="students-waiting">في انتظار إجابات الطلاب...</p>
+
+        <!-- زر "من هو الفائز" -->
+        <div id="who-is-winner" style="display:none;">
+            <button onclick="showWinner()">من هو الفائز؟</button>
+        </div>
+    </div>
+
+    <!-- شاشة الفائز -->
+    <div id="winner-screen" style="display:none;">
+        <h1>الفائز هو:</h1>
+        <h2 id="winner-name" style="color: green; font-size: 40px;"></h2>
+        <img id="winner-img" src="winner.png" alt="صورة الفائز" style="width: 100px;">
+        <button onclick="restart()">ابدأ من جديد</button>
+    </div>
+
+    <!-- قسم الشكر -->
+    <footer>
+        <div class="credit">
+            <p>Designed by: الأستاذ أحمد الضامري</p>
+        </div>
+    </footer>
+
+    <!-- ملف الصوت -->
+    <audio id="hover-sound" src="s.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

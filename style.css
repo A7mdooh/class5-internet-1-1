@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 2.5em; /* تكبير عنوان الصفحة */
+}
+
+.question-text {
+    font-size: 1.8em; /* تكبير النص في السؤال */
+    font-weight: bold;
+}
+
+.answers-container {
+    margin-top: 20px;
+}
+
+.answer-btn {
+    background-color: #ffc107;
+    margin: 10px;
+    padding: 15px 40px;
+    font-size: 1.3em; /* تكبير حجم الأزرار */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer-btn:hover {
+    background-color: #e0a800;
+}
+
+#students-waiting {
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#who-is-winner button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em; /* تكبير حجم الزر */
+    cursor: pointer;
+}
+
+#who-is-winner button:hover {
+    background-color: #0056b3;
+}
+
+#question-image {
+    margin-top: 20px;
+}
